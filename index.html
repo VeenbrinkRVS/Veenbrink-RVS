@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>Powder Hopper Example</title>
+	<link rel="icon" href="https://veenbrink.nl/images/favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="Powder hopper.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.png" shadow-intensity="1" environment-image="legacy" auto-rotate>
+    <model-viewer id="dimension-demo" src="Powder hopper.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.png" shadow-intensity="1" environment-image="legacy" auto-rotate>
       <button class="Hotspot" slot="hotspot-1" data-position="0.4623222298190601m 1.5673465669625868m 0.3571408915115312m" data-normal="0.8660252955903435m -1.487422176592629e-17m 0.5000001873976234m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Nameplate</div>
       </button><button class="Hotspot" slot="hotspot-2" data-position="-0.5867196153983928m 1.4014711709080727m -0.31340112030190076m" data-normal="0.500000187397666m 8.127402537316321e-17m -0.8660252955903186m" data-visibility-attribute="visible">
@@ -32,6 +33,33 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
+	  
+	    <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+  <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+  <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+  <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+  <button slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></button>
+  <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+  <button slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></button>
+  <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+  <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+  <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+  <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
+  <svg id="lines" xmlns="http://www.w3.org/2000/svg" class="dimensionLineContainer">
+    <line class="dimensionLine"></line>
+    <line class="dimensionLine"></line>
+    <line class="dimensionLine"></line>
+    <line class="dimensionLine"></line>
+    <line class="dimensionLine"></line>
+  </svg>
+	  
+	  
+	  
+	  <div id="controls" class="dim">
+    <label for="show-dimensions">Show Dimensions:</label>
+    <input id="show-dimensions" type="checkbox" checked="true">
+  </div>
+  
     </model-viewer>  
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
