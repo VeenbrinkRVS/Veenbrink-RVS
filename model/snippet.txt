@@ -1,0 +1,16 @@
+<model-viewer src="Astronaut.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.47626088957672497m 1.0404197049146808m 0.11891502267500442m" data-normal="-0.5358356056590664m -0.027966950252812962m 0.843859024601585m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">sick</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="0.18696214161063018m 1.7192347734295768m -0.3335578970626941m" data-normal="0.9029205449734712m -0.000004090324518041423m -0.4298075027824421m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">vet</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
