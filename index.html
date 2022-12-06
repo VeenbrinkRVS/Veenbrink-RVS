@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="Powder hopper.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.png" shadow-intensity="1" environment-image="legacy" auto-rotate>
+      <button class="Hotspot" slot="hotspot-1" data-position="0.4623222298190601m 1.5673465669625868m 0.3571408915115312m" data-normal="0.8660252955903435m -1.487422176592629e-17m 0.5000001873976234m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Nameplate</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-0.5867196153983928m 1.4014711709080727m -0.31340112030190076m" data-normal="0.500000187397666m 8.127402537316321e-17m -0.8660252955903186m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Support</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-0.05361452317540105m 0.06962058713856445m 0.05654220998758397m" data-normal="-0.9829241854130966m -6.826785785639449e-17m -0.1840109935031081m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Outlet</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.321907716861546m 1.8904489055252458m -0.08794577352565083m" data-normal="-0.9999292098384349m -1.1365645032813829e-16m 0.011898542426839399m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Safety</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-0.26091068054404265m 2.305250468037567m -0.061754895390924096m" data-normal="-0.6475306595828704m 0.6640320676326541m -0.3738521874426782m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Handle</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
